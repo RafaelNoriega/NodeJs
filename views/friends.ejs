@@ -1,10 +1,23 @@
-<h1>Friends go here</h1>
+<% include partials/header %>
 
-<% friends.forEach(function(friend){ %>
-	<li>I have a friend <%= friend %> </li> 
-<% }); %>
+<div class="padding bg">
+	<h1>My Friends List</h1>
 
-<form action="/addFriend" method="POST">
-	<input type="text"  placeholder="name" name="newFriend">
-	<button>New Friend</button>
-</form>
+
+	<% friends.forEach(function(friend){ %>
+		<p><%=friend%></p> 
+	<% }); %>
+
+
+	<hr>
+	<form action="/addFriend" method="POST">
+		<input type="text"  placeholder="name" name="newFriend">
+		<br>
+		<br>
+		<button class="button">Add Friend</button>
+	</form>
+<br>
+<br>
+</div>
+
+<% include partials/footer %>

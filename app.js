@@ -2,8 +2,13 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 
+//this is used to allow ejs files to be read by express
 app.set("view engine", "ejs");
+//this will allow us to submit Post request and use them an JS objects
 app.use(bodyParser.urlencoded({extended: true}));
+//this will tell express to also serve the public folder when running
+app.use(express.static("public"));
+
 var friends = ["Tony", "Miranda", "Justin", "Pierre", "Lily"];	
 
 app.get("/", function(req, res){
