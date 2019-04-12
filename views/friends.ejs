@@ -2,13 +2,6 @@
 
 <div class="padding bg">
 	<h1>My Friends List</h1>
-
-
-	<% friends.forEach(function(friend){ %>
-		<p><%=friend%></p> 
-	<% }); %>
-
-
 	<hr>
 	<form action="/addFriend" method="POST">
 		<input type="text"  placeholder="name" name="newFriend">

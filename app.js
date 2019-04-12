@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //this will tell express to also serve the public folder when running
 app.use(express.static("public"));
 
-var friends = ["Tony", "Miranda", "Justin", "Pierre", "Lily"];	
+var friends = [];	
 
 app.get("/", function(req, res){
 	res.render("home");
